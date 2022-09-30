@@ -18,5 +18,22 @@
             Clave = clave;
         }
 
+        public void IniciarSesion()
+        {
+
+        }
+
+        public void CerrarSesion()
+        {
+
+        }
+
+        public void BorrarUsuario()
+        {
+
+        }
+
+
+
     }
 }

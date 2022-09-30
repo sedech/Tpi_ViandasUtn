@@ -6,15 +6,41 @@
          como definir el atributo horario si con DateTime
       
          */
+        public int IdPedido { get; set; }
         public DateTime FechaPedido { get; set; }
-        public DateTime HorarioRetirado { get; set; }
-        public List<Producto> courses = new List<Producto>();
-        public int IdPedido { get; set;}
-        public Pedido(DateTime fechaPedido, DateTime horarioRetirado, List<Producto> Producto)
-            : base(fechaPedido, horarioRetirado)
+        public DateTime FechaRetiro { get; set; }
+        public List<Producto> Productos { get; set; }
+        
+        public Pedido(int idPedido, DateTime fechaPedido, DateTime fechaRetiro, List<Producto> productos)
+           
         {
+            IdPedido = idPedido;    
             FechaPedido = fechaPedido;
-            HorarioRetirado = horarioRetirado;
+            FechaRetiro = fechaRetiro;
         }
+
+        public void HacerPedido()
+        {
+
+        }
+
+        public void ModificarPedido()
+        {
+
+        }
+
+        public void BorrarPedido()
+        {
+
+        }
+
+        public void GenerarFactura()
+        {
+
+        }
+
+
+
+
     }
 }

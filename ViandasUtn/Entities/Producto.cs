@@ -2,16 +2,16 @@
 {
     public class Producto
     {
-        public string Id { get; set; }
+        public string IdProducto { get; set; }
         public string Nombre { get; set; }
         public float Precio { get; set; }
         public int Cantidad { get; set; }
         /*
          BD como armar el archivo 
          */
-        public Producto(string id, string nombre, float precio, int cantidad)
+        public Producto(string idProducto, string nombre, float precio, int cantidad)
         {
-            Id = id;
+            IdProducto = idProducto;
             Nombre = nombre;
             Precio = precio;
             Cantidad = cantidad;
@@ -21,6 +21,21 @@
              * diagrama de clase  usuario/nombre/apellido -------------
              */
 
+
+        }
+
+        public void AgregarProducto()
+        {
+
+        }
+
+        public void ModificarProducto()
+        {
+
+        }
+
+        public void EliminarProducto()
+        {
 
         }
     }
