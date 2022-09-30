@@ -4,12 +4,14 @@
     {
         public string IdProducto { get; set; }
         public string Nombre { get; set; }
-        public float Precio { get; set; }
+        public int Precio { get; set; }
         public int Cantidad { get; set; }
+
+        // agregamos el tipo de producto ? 
         /*
          BD como armar el archivo 
          */
-        public Producto(string idProducto, string nombre, float precio, int cantidad)
+        public Producto(string idProducto, string nombre, int precio, int cantidad)
         {
             IdProducto = idProducto;
             Nombre = nombre;
