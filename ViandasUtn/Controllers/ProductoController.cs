@@ -6,12 +6,14 @@ namespace ViandasUtn.Controllers
     public class ProductoController : Controller
     {
         // ver 
-                List<Producto> productos = new List<Producto>
+        List<Producto> productos = new List<Producto>()
         {
-            new Producto{ IdProducto = "1", Nombre = "Cafe", Precio = 200, Cantidad = 2 }, // como poner cantidad
-            new Producto{ IdProducto = "3", Nombre = "Tostado", Precio = 450, Cantidad = 1  },
-            new Producto{ IdProducto = "5", Nombre = "Alfajor", Precio = 150, Cantidad = 3  }
+            new Producto(  1,  "Cafe",  200,  2 ), // como poner cantidad
+            new Producto(  3, "Tostado", 450,  1  ),
+            new Producto( 5, "Alfajor", 150,  3  )
+
         };
+
 
         // GET: ProductoController
         public ActionResult Index()
@@ -21,28 +23,32 @@ namespace ViandasUtn.Controllers
         //  CRUD 
 
         [HttpGet("[controller]/Lista")]
-        public IEnumerable<Producto> Lista()
+        public IEnumerable<Producto> Lista() // un interface heredan lista, arreglo, conexion como un tipo general
         {
-            return Enumerable.Range(1, 5).Select(index => new Producto
-            {
-                IdProducto = idProducto,
-                Nombre = nombre,
-                Precio = precio,
-                Cantidad = cantidad
-        })
-            .ToArray();
+            return productos;
         }
 
         [HttpPost("[controller]/Agregar")]
         public IEnumerable<Producto> Agregar()
         {
-            return Enumerable.Range(1, 5).Select(index => new Producto // ?? como agregar y borrar
+
+            Producto p = new Producto(4,"chocotorta", 200, 1);
+  
+            productos.Add(p);
+            return productos; 
+            
+        }
+
+        [HttpPut("[controller]/Actualizar")]
+        public IEnumerable<Producto> Actualizar()
+        {
+            return Enumerable.Range(1, 5).Select(index => new Producto
             {
-                Date = DateTime.Now.AddDays(index),
-                TemperatureC = Random.Shared.Next(-20, 55)
+              /// que escribir 
             })
             .ToArray();
         }
+
 
         [HttpDelete("[controller]/Borrar")]
         public IEnumerable<Producto> Borrar()

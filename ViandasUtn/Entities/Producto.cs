@@ -2,7 +2,7 @@
 {
     public class Producto
     {
-        public string IdProducto { get; set; }
+        public int IdProducto { get; set; }
         public string Nombre { get; set; }
         public int Precio { get; set; }
         public int Cantidad { get; set; }
@@ -11,7 +11,7 @@
         /*
          BD como armar el archivo 
          */
-        public Producto(string idProducto, string nombre, int precio, int cantidad)
+        public Producto(int idProducto, string nombre, int precio, int cantidad)
         {
             IdProducto = idProducto;
             Nombre = nombre;
