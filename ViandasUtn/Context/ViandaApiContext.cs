@@ -16,7 +16,7 @@ namespace ViandasUtn.Context
         {
             modelBuilder.Entity<Usuario>().HasData(new Usuario()  // add usuario al BD
             {
-                Id = 1,
+                Id =  1,     
                 Name = "Karen",
                 LastName = "Lasot",
                 Password = "Pa$$w0rd",
