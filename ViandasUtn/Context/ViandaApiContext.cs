@@ -17,20 +17,20 @@ namespace ViandasUtn.Context
             modelBuilder.Entity<Usuario>().HasData(new Usuario()  // add usuario al BD
             {
                 Id =  1,     
-                Name = "Karen",
-                LastName = "Lasot",
-                Password = "Pa$$w0rd",
-                Email = "karenbailapiola@gmail.com",
-                UserName = "karenpiola"
+                Name = "Mika",
+                LastName = "Ben",
+                Password = "@Rosario22",
+                Email = "mikaben@gmail.com",
+                UserName = "benka"
             });
             modelBuilder.Entity<Usuario>().HasData(new Usuario() 
             {
                 Id = 2,
-                Name = "Luis Gonzalez",
-                LastName = "Gonzales",
-                Password = "lamismadesiempre",
-                Email = "elluismidetotoras@gmail.com",
-                UserName = "luismitoto"
+                Name = "Dom",
+                LastName = "Toreto",
+                Password = "#Dodge1970",
+                Email = "toreto@gmail.com",
+                UserName = "toretodom"
             });
             base.OnModelCreating(modelBuilder);
         }

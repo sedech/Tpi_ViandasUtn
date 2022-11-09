@@ -50,20 +50,20 @@ namespace ViandasUtn.Migrations
                         new
                         {
                             Id = 1,
-                            Email = "karenbailapiola@gmail.com",
-                            LastName = "Lasot",
-                            Name = "Karen",
-                            Password = "Pa$$w0rd",
-                            UserName = "karenpiola"
+                            Name = "Mika",
+                            LastName = "Ben",
+                            Password = "@Rosario22",
+                            Email = "mikaben@gmail.com",
+                            UserName = "benka"
                         },
                         new
                         {
                             Id = 2,
-                            Email = "elluismidetotoras@gmail.com",
-                            LastName = "Gonzales",
-                            Name = "Luis Gonzalez",
-                            Password = "lamismadesiempre",
-                            UserName = "luismitoto"
+                            Name = "Dom",
+                            LastName = "Toreto",
+                            Password = "#Dodge1970",
+                            Email = "toreto@gmail.com",
+                            UserName = "toretodom"
                         });
                 });
 #pragma warning restore 612, 618
