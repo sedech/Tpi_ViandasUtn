@@ -1,44 +1,25 @@
-﻿namespace ViandasUtn
+﻿using System.ComponentModel.DataAnnotations;
+
+namespace ViandasUtn
 {
     public class Producto
     {
-        public int IdProducto { get; set; }
-        public string Nombre { get; set; }
-        public int Precio { get; set; }
-        public int Cantidad { get; set; }
+        [Key] // idProducro va a ser la clave primaria del produc
+        public int Id { get; set; }
+        public string Name { get; set; }
+        public string Description { get; set; }
+        public decimal Price { get; set; }
+        
 
-        // agregamos el tipo de producto ? 
-        /*
-         BD como armar el archivo 
-         */
-        public Producto(int idProducto, string nombre, int precio, int cantidad)
+        public Producto(int id, string name, string description, decimal price )
         {
-            IdProducto = idProducto;
-            Nombre = nombre;
-            Precio = precio;
-            Cantidad = cantidad;
-            /*
-             * modelo de datos o domini usuario/precio/ cantidad para el jueves 29 
-             * metodos que hacen falta crear usuario, autenticar usuario 
-             * diagrama de clase  usuario/nombre/apellido -------------
-             */
-
+            Id = id;
+            Name = name;
+            Price = price;
+            Description= description;
 
         }
 
-        public void AgregarProducto()
-        {
-
-        }
-
-        public void ModificarProducto()
-        {
-
-        }
-
-        public void EliminarProducto()
-        {
-
-        }
+        
     }
 }

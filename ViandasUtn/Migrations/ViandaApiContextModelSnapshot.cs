@@ -16,6 +16,27 @@ namespace ViandasUtn.Migrations
 #pragma warning disable 612, 618
             modelBuilder.HasAnnotation("ProductVersion", "6.0.10");
 
+            modelBuilder.Entity("ViandasUtn.Producto", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("INTEGER");
+
+                    b.Property<int>("Cantidad")
+                        .HasColumnType("INTEGER");
+
+                    b.Property<string>("Nombre")
+                        .IsRequired()
+                        .HasColumnType("TEXT");
+
+                    b.Property<int>("Precio")
+                        .HasColumnType("INTEGER");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Productos");
+                });
+
             modelBuilder.Entity("ViandasUtn.Usuario", b =>
                 {
                     b.Property<int>("Id")
@@ -50,19 +71,19 @@ namespace ViandasUtn.Migrations
                         new
                         {
                             Id = 1,
-                            Name = "Mika",
-                            LastName = "Ben",
-                            Password = "@Rosario22",
                             Email = "mikaben@gmail.com",
+                            LastName = "Ben",
+                            Name = "Mika",
+                            Password = "@Rosario22",
                             UserName = "benka"
                         },
                         new
                         {
                             Id = 2,
-                            Name = "Dom",
-                            LastName = "Toreto",
-                            Password = "#Dodge1970",
                             Email = "toreto@gmail.com",
+                            LastName = "Toreto",
+                            Name = "Dom",
+                            Password = "#Dodge1970",
                             UserName = "toretodom"
                         });
                 });

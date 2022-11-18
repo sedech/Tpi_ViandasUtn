@@ -10,13 +10,34 @@ using ViandasUtn.Context;
 namespace ViandasUtn.Migrations
 {
     [DbContext(typeof(ViandaApiContext))]
-    [Migration("20221106190313_inicial")]
-    partial class inicial
+    [Migration("20221113192351_lkm")]
+    partial class lkm
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder.HasAnnotation("ProductVersion", "6.0.10");
+
+            modelBuilder.Entity("ViandasUtn.Producto", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("INTEGER");
+
+                    b.Property<int>("Cantidad")
+                        .HasColumnType("INTEGER");
+
+                    b.Property<string>("Nombre")
+                        .IsRequired()
+                        .HasColumnType("TEXT");
+
+                    b.Property<int>("Precio")
+                        .HasColumnType("INTEGER");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Productos");
+                });
 
             modelBuilder.Entity("ViandasUtn.Usuario", b =>
                 {
@@ -47,6 +68,26 @@ namespace ViandasUtn.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("Usuarios");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = 1,
+                            Email = "mikaben@gmail.com",
+                            LastName = "Ben",
+                            Name = "Mika",
+                            Password = "@Rosario22",
+                            UserName = "benka"
+                        },
+                        new
+                        {
+                            Id = 2,
+                            Email = "toreto@gmail.com",
+                            LastName = "Toreto",
+                            Name = "Dom",
+                            Password = "#Dodge1970",
+                            UserName = "toretodom"
+                        });
                 });
 #pragma warning restore 612, 618
         }

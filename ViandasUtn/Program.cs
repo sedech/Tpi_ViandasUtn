@@ -53,6 +53,8 @@ builder.Services.AddAuthentication("Bearer") //"Bearer" es el tipo de auntentica
 );
 
 builder.Services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
+builder.Services.AddScoped<IProductoRepository, ProductRepository>();
+builder.Services.AddScoped<IPedidoRepository, ProductoRepository>();
 
 builder.Services.AddScoped<IUserRepository, UserRepository>();
 var app = builder.Build();

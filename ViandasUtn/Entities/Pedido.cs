@@ -2,42 +2,39 @@
 {
     public class Pedido           
     {
-        /*
-         como definir el atributo horario si con DateTime
-      
-         */
-        public int IdPedido { get; set; }
+        
+        public int Id { get; set; }
         public DateTime FechaPedido { get; set; }
         public DateTime FechaRetiro { get; set; }
         public List<Producto> Productos { get; set; }
         
-        public Pedido(int idPedido, DateTime fechaPedido, DateTime fechaRetiro, List<Producto> productos)
+        public Pedido(int id, DateTime fechaPedido, DateTime fechaRetiro, List<Producto> productos)
            
         {
-            IdPedido = idPedido;    
+            Id  = id;    
             FechaPedido = fechaPedido;
             FechaRetiro = fechaRetiro;
         }
 
-        public void HacerPedido()
-        {
+        //public void HacerPedido()
+        //{
 
-        }
+        //}
 
-        public void ModificarPedido()
-        {
+        //public void ModificarPedido()
+        //{
 
-        }
+        //}
 
-        public void BorrarPedido()
-        {
+        //public void BorrarPedido()
+        //{
 
-        }
+        //}
 
-        public void GenerarFactura()
-        {
+        //public void GenerarFactura()
+        //{
 
-        }
+        //}
 
 
 

@@ -16,7 +16,21 @@ namespace ViandasUtn
         [Required]
         public string UserName { get; set; }
 
+        public Usuario( int id, string name, string lastName, string password, string email, string userName)
+        {
+                Id = id;
+                Name = name;
+                LastName = lastName;
+                Password   = password;
+                Email = email;
+                UserName = userName;
+        }
 
-
+        public Usuario()
+        {
+        }
     }
+
 }
+
+    
