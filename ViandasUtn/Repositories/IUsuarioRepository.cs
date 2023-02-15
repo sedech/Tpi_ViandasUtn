@@ -2,7 +2,7 @@
 
 namespace ViandasUtn.Repositories
 {
-    public interface IUserRepository
+    public interface IUsuarioRepository
     {
         public Usuario? ValidateUser(AuthenticationRequestBody authRequestBody);
         public Usuario? GetById(int userId);

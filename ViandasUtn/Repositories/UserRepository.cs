@@ -4,7 +4,7 @@ using ViandasUtn.Models;
 
 namespace ViandasUtn.Repositories
 {
-    public class UserRepository : IUserRepository
+    public class UserRepository : IUsuarioRepository
     {
 
         private ViandaApiContext _context;

@@ -14,9 +14,9 @@ namespace ViandasUtn.Controllers
     public class AuthController : ControllerBase
     {
         private readonly IConfiguration _config;
-        private readonly IUserRepository _userRepository;
+        private readonly IUsuarioRepository _userRepository;
 
-        public AuthController(IConfiguration config, IUserRepository userRepository)
+        public AuthController(IConfiguration config, IUsuarioRepository userRepository)
         {
             _config = config; //Hacemos la inyección para poder usar el appsettings.json
             this._userRepository = userRepository;

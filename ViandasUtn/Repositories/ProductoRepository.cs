@@ -57,7 +57,7 @@ namespace ViandasUtn.Repositories
                 
             prod.Name = producto.Name;
             prod.Price = producto.Price;
-            prod.Quantity = producto.Quantity;
+            prod.Description = producto.Description;
             return SaveChanges();
         }
     }

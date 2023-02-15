@@ -4,11 +4,11 @@
     {
         
         public int Id { get; set; }
-        public DateTime FechaPedido { get; set; }
-        public DateTime FechaRetiro { get; set; }
+        public string FechaPedido { get; set; }
+        public string FechaRetiro { get; set; }
         public List<Producto> Productos { get; set; }
         
-        public Pedido(int id, DateTime fechaPedido, DateTime fechaRetiro, List<Producto> productos)
+        public Pedido(int id, string fechaPedido, string fechaRetiro, List<Producto> productos)
            
         {
             Id  = id;    

@@ -31,7 +31,7 @@ namespace ViandasUtn.Context
             );
             // 
             modelBuilder.Entity<Pedido>().HasData(
-                
+                   new
                 );
             base.OnModelCreating(modelBuilder);
         }
